@@ -182,10 +182,11 @@ Referencias oficiais:
 #### Entrega
 
 - Modo vendedor: loja gerencia separacao e entrega.
+- Modo parceiro: parceiros logisticos homologados realizam a entrega com SLA, rastreio e regras operacionais definidas pela plataforma.
 - Modo plataforma: plataforma gerencia entregador, SLA e rastreio.
 - Modo hibrido: loja separa, plataforma entrega.
 
-Recomendacao: comecar com modo vendedor e hibrido. Logistica propria no dia 1 aumenta capital, risco operacional e complexidade.
+Recomendacao: comecar com modo vendedor, modo parceiro e modo hibrido. Logistica propria no dia 1 aumenta capital, risco operacional e complexidade.
 
 ## 6. Modelo de dados conceitual
 
