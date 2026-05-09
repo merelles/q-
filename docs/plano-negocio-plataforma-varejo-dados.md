@@ -15,7 +15,7 @@ A tese defensavel e construir uma infraestrutura de dados e transacao para o var
 - conectar consumidores, lojas, distribuidores e industria;
 - vender inteligencia comercial e ativacao dentro da jornada de compra;
 - permitir venda dentro da plataforma;
-- operar carteira, pontos/tokens e cupons para redistribuir parte da receita ao consumidor;
+- operar carteira, pontos/tokens e cupons para redistribuir parte do fundo de incentivo ao consumidor;
 - oferecer servicos B2B de cadastro fiscal, estoque, integracao, venda e delivery.
 
 O ativo principal nao e o app. O ativo principal e a base transacional normalizada, consentida, georreferenciada e acionavel.
@@ -25,7 +25,7 @@ O ativo principal nao e o app. O ativo principal e a base transacional normaliza
 ### Para consumidores
 
 - Ganhar tokens/pontos ao escanear notas fiscais.
-- Trocar tokens por saldo/cupom uma vez por mes, conforme regra de faturamento e caixa disponivel.
+- Trocar tokens por saldo promocional uma vez por mes, conforme regra central do fundo de incentivo.
 - Pesquisar precos, produtos, lojas proximas e historico de consumo com limites gratuitos.
 - Pagar por mais consultas usando saldo fiat, tokens recebidos ou pacote de tokens.
 - Comprar produtos dentro da plataforma com ofertas subsidiadas por lojas, distribuidores ou industria.
@@ -256,6 +256,36 @@ Contramedida:
 - Recomendacao contextual.
 - Promocao por categoria, regiao, loja ou perfil agregado.
 
+### Fundo de incentivo e retencao
+
+O fundo de incentivo nao e take rate da plataforma. Ele e uma retencao variavel sobre as vendas feitas dentro da plataforma, calculada por item vendido conforme a curva de rotatividade do produto:
+
+- Curva A: 5% do valor vendido do item.
+- Curva B: 10% do valor vendido do item.
+- Curva C: 15% do valor vendido do item.
+
+A curva deve ser definida por criterio objetivo de giro, margem, disponibilidade e estrategia comercial. Produto de maior rotatividade exige menor retencao. Produto de menor rotatividade pode sustentar maior incentivo, desde que a margem e o acordo comercial permitam.
+
+Formula do fundo no periodo:
+
+```text
+Fundo do periodo = soma(valor vendido do item x percentual da curva do item)
+```
+
+Distribuicao mensal do fundo:
+
+- 20% do fundo sera convertido em token/saldo de leitura de notas fiscais.
+- 60% do fundo sera convertido em cupom de desconto para compras dentro da plataforma.
+- 20% do fundo ficara como reserva operacional do proprio mecanismo, para antifraude, chargeback, arredondamentos, ajustes de campanha e contingencias.
+
+Formula da distribuicao para leitura de notas:
+
+```text
+Saldo de leitura do usuario = parcela de leitura do fundo x (tokens do usuario no periodo / total de tokens emitidos no periodo)
+```
+
+Essa regra deve ser tratada como politica de incentivo e liquidez, nao como receita bruta da empresa.
+
 ### O que nao cobrar no inicio
 
 Nao cobrar pesado do consumidor antes de provar valor. O consumidor ja precisa ter trabalho de escanear nota. Se o premio for baixo e a consulta for paga cedo demais, o funil morre.
@@ -269,7 +299,7 @@ Selecionar 10 lojas com faturamento mensal aproximado de R$ 3 milhoes cada.
 Objetivo:
 
 - converter 10% das vendas dessas lojas para dentro da plataforma;
-- cobrar 1% sobre vendas transacionadas;
+- aplicar a regra central do fundo de incentivo sobre as vendas transacionadas;
 - usar as integracoes como base para o produto;
 - vender revisao fiscal/cadastral;
 - usar consumidores dessas lojas para alimentar a base de notas e precos;
@@ -285,19 +315,19 @@ Meta de conversao para plataforma:
 
 - 10% = R$ 3 milhoes/mes em GMV.
 
-Receita com taxa de 1%:
+Fundo de incentivo:
 
-- R$ 30 mil/mes.
+- calculado pela retencao por curva definida na secao de modelo de negocio.
 
 Leitura dura:
 
-- R$ 30 mil/mes nao paga a operacao.
+- fundo de incentivo nao paga a operacao, porque nao e receita da plataforma.
 - Esse kickoff serve para aprendizado, dados, prova comercial e integracao.
 - Nao serve como motor financeiro da empresa.
 
 Para a empresa ficar interessante, precisa de pelo menos uma das tres coisas:
 
-- take rate maior que 1%;
+- comissao propria da plataforma, separada do fundo de incentivo;
 - receita relevante de trade spend;
 - SaaS/servicos B2B cobrados fora do percentual de venda.
 
@@ -309,7 +339,7 @@ Para a empresa ficar interessante, precisa de pelo menos uma das tres coisas:
 - 200 mil+ notas escaneadas/mes, se o incentivo funcionar.
 - Base com 100 mil+ EANs tratados.
 - 3 industrias/distribuidores pagando campanha piloto.
-- Receita mensal recorrente acima de R$ 100 mil somando SaaS, servicos, take rate e campanhas.
+- Receita mensal recorrente acima de R$ 100 mil somando SaaS, servicos, comissao propria e campanhas. O fundo de incentivo nao entra como receita recorrente.
 
 Se a receita ficar abaixo disso, ha sinal de que o produto e util, mas nao economico.
 
@@ -354,19 +384,11 @@ Motivo:
 
 ### Conversao mensal
 
-O usuario escaneia notas e acumula pontos. Uma vez por mes, a plataforma calcula o pool de recompra/bonus conforme receita liquida disponivel.
-
-Exemplo de alocacao da taxa sobre venda:
-
-- receita bruta da plataforma: X% do GMV;
-- reserva para impostos, chargeback, atendimento e operacao;
-- reserva para campanhas/cupons;
-- reserva para compra/resgate de pontos dos escaneadores;
-- margem da plataforma.
+O usuario escaneia notas e acumula pontos. Uma vez por mes, a plataforma converte a parcela de leitura de notas do fundo de incentivo em saldo promocional, conforme a regra unica definida no modelo de negocio.
 
 Ponto critico:
 
-- se o usuario nao souber quanto ganha por nota, a proposta perde forca;
+- se o usuario nao souber como o saldo e calculado, a proposta perde forca;
 - se prometer valor fixo alto, a conta pode quebrar;
 - se o valor for baixo demais, ninguem escaneia.
 
@@ -446,8 +468,8 @@ Referencia: https://inventti.com.br/nf-e-nfc-e-nt-2025-001-publicada-a-versao-1-
 
 - 10 lojas no piloto.
 - R$ 3 milhoes/mes GMV dentro da plataforma.
-- Take rate inicial: 1%.
-- Receita take rate: R$ 30 mil/mes.
+- Fundo de incentivo calculado por rotatividade, conforme regra unica do modelo de negocio.
+- Receita da plataforma separada do fundo de incentivo.
 - SaaS por loja: R$ 1.000 a R$ 3.000/mes.
 - Receita SaaS: R$ 10 mil a R$ 30 mil/mes.
 - Servico fiscal/cadastro: R$ 5 mil a R$ 20 mil por loja em projeto inicial.
@@ -457,35 +479,35 @@ Referencia: https://inventti.com.br/nf-e-nfc-e-nt-2025-001-publicada-a-versao-1-
 
 Cenario fraco:
 
-- take rate: R$ 30 mil;
 - SaaS: R$ 10 mil;
 - campanhas: R$ 20 mil;
-- total: R$ 60 mil/mes.
+- comissao/servicos sobre transacao: a validar;
+- total sem considerar fundo de incentivo: R$ 30 mil/mes mais comissao/servicos sobre transacao.
 
 Cenario bom:
 
-- take rate: R$ 30 mil;
 - SaaS: R$ 30 mil;
 - campanhas: R$ 100 mil;
 - servicos recorrentes: R$ 30 mil;
-- total: R$ 190 mil/mes.
+- comissao/servicos sobre transacao: a validar;
+- total sem considerar fundo de incentivo: R$ 160 mil/mes mais comissao/servicos sobre transacao.
 
 Leitura:
 
 - o piloto so faz sentido se provar campanhas e servicos B2B;
-- depender de 1% sobre GMV e insuficiente.
+- depender do fundo de incentivo como se fosse receita e erro de modelo.
 
 ### Break-even simplificado
 
 Se o custo mensal operacional sem desenvolvimento/infra for R$ 150 mil a R$ 300 mil, o break-even exige:
 
 - GMV muito maior;
-- take rate maior;
+- comissao propria sobre transacao;
 - campanhas recorrentes;
 - SaaS real;
 - operacao enxuta.
 
-Com take rate de 1%, cada R$ 10 milhoes de GMV gera apenas R$ 100 mil de receita bruta. Isso nao sustenta uma empresa complexa se nao houver outras receitas.
+O fundo de incentivo deve aumentar liquidez, retencao e conversao. Ele nao substitui receita de SaaS, campanhas, servicos, comissao propria e analytics.
 
 ## 14. Investimento e custos
 
@@ -628,19 +650,19 @@ Nao incluir:
 
 ## 17. O que esta fraco
 
-### 1. A economia do scan ainda nao fecha
+### 1. A economia do scan ainda precisa ser provada
 
-O usuario precisa de incentivo alto o bastante para escanear nota sempre. Mas a fonte de dinheiro para comprar esses pontos vem de receita que ainda nao existe.
+O usuario precisa de incentivo alto o bastante para escanear nota sempre. A fonte do incentivo esta definida no fundo por curva, mas a empresa ainda precisa provar que essa distribuicao aumenta retencao, compra e recorrencia.
 
-Sem campanha patrocinada, SaaS ou take rate relevante, o token vira custo de aquisicao sem retorno.
+Sem campanha patrocinada, SaaS, comissao propria ou venda incremental, o token vira redistribuicao sem retorno economico claro.
 
 ### 2. "Vender base de dados" e juridicamente perigoso
 
 O plano precisa trocar essa linguagem por "vender inteligencia agregada e acionavel". Se vender dado pessoal bruto ou reidentificavel, o risco LGPD pode matar a empresa.
 
-### 3. Take rate de 1% e baixo demais
+### 3. Confundir fundo com receita distorce a decisao
 
-Com R$ 3M de GMV, 1% gera R$ 30k. Isso e pouco para uma operacao com dados, suporte, fiscal, antifraude e integracao.
+O fundo de incentivo nao deve ser lido como receita da plataforma. Ele financia token de leitura, cupom de desconto e reserva operacional do proprio mecanismo. A empresa precisa de receita propria fora desse fundo.
 
 ### 4. Carteira, token e conta podem virar outra empresa
 
@@ -773,7 +795,7 @@ Venda marketplace exige conciliacao entre consumidor, loja, entregador, platafor
 - Industria paga por campanha com pouco volume inicial.
 - Dados de nota sao tecnicamente capturaveis com qualidade suficiente.
 - LGPD permite monetizacao agregada com consentimento e governanca.
-- 1% de take rate abre porta, mas nao sustenta sozinho.
+- O fundo de incentivo por curva aumenta leitura de notas, conversao em compra e recorrencia sem destruir a margem.
 
 ### Experimentos
 
@@ -783,7 +805,7 @@ Coletar 5.000 notas reais consentidas em 3 UFs. Medir taxa de leitura, EAN dispo
 
 2. Teste de incentivo
 
-Rodar 3 modelos de recompensa: valor fixo por nota, sorteio mensal e pontos variaveis por categoria. Medir notas por usuario e fraude.
+Testar a regra do fundo de incentivo por curva. Medir leitura de notas, uso de cupons, recompra, fraude, margem por pedido e impacto na recorrencia.
 
 3. Teste lojista
 
@@ -840,4 +862,3 @@ O que precisa ser cortado ou adiado:
 O plano fica forte se a empresa provar uma coisa: que consegue transformar dados de compra e estoque local em venda incremental paga por industria, distribuidor e lojista.
 
 Se nao provar isso, vira um app caro de cupom e delivery competindo contra players maiores.
-
