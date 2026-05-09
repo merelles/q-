@@ -960,3 +960,49 @@ O que precisa ser cortado ou adiado:
 O plano fica forte se a empresa provar uma coisa: que consegue transformar dados de compra e estoque local em venda incremental paga por industria, distribuidor e lojista.
 
 Se nao provar isso, vira um app caro de cupom e delivery competindo contra players maiores.
+
+## 23. Cenarios de valuation em 24 meses
+
+O valuation deve ser calculado principalmente sobre receita recorrente real, margem, retencao de lojas, recorrencia de campanhas e prova de venda incremental. GMV bruto nao deve ser usado como base principal de valuation, porque parte relevante do fluxo pode ser fundo de incentivo, cupom, repasse ao lojista ou subsidio comercial.
+
+Premissa de referencia para 24 meses:
+
+- 100 lojas ativas;
+- GMV relevante dentro da plataforma;
+- fundo de incentivo separado da receita da plataforma;
+- receita real vinda de SaaS, campanhas, servicos, comissao propria e inteligencia de mercado e precificacao;
+- trade spend recorrente e mensuravel;
+- venda incremental comprovada.
+
+### Cenario conservador
+
+- Receita mensal: R$ 400k a R$ 700k.
+- ARR: R$ 4,8M a R$ 8,4M.
+- Multiplo estimado: 3x a 5x ARR.
+- Valuation estimado: R$ 14M a R$ 42M.
+
+Leitura: negocio validado, mas ainda com risco operacional alto, dependencia comercial relevante e prova limitada de escala.
+
+### Cenario base forte
+
+- Receita mensal: R$ 800k a R$ 1,5M.
+- ARR: R$ 9,6M a R$ 18M.
+- Multiplo estimado: 4x a 7x ARR.
+- Valuation estimado: R$ 38M a R$ 126M.
+
+Leitura: negocio com receita recorrente, campanhas pagas, retencao de lojas e sinais claros de venda incremental. Essa e a faixa mais defensavel se as metas forem batidas com consistencia.
+
+### Cenario excelente
+
+- Receita mensal: R$ 2M a R$ 3M.
+- ARR: R$ 24M a R$ 36M.
+- Multiplo estimado: 6x a 10x ARR.
+- Valuation estimado: R$ 144M a R$ 360M.
+
+Leitura: exige trade spend recorrente forte, baixa dependencia operacional, dados proprios dificeis de copiar, margem clara, crescimento mensal consistente e campanhas renovando sem venda consultiva pesada.
+
+### Numero honesto de referencia
+
+Se a plataforma bater as metas de 24 meses com receita recorrente, campanhas pagas e prova de incrementalidade, uma faixa defensavel fica entre R$ 60M e R$ 150M.
+
+Acima disso, o valuation so se sustenta se a plataforma provar que converte dinheiro de trade spend em venda incremental mensuravel, com margem positiva e retencao real de lojas, industrias e consumidores.
