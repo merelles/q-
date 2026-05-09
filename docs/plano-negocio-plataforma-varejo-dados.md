@@ -49,7 +49,7 @@ O ativo principal nao e o app. O ativo principal e a base transacional normaliza
 ### Para a propria plataforma
 
 - Receita por venda dentro da plataforma.
-- Receita por acesso a dados/analytics.
+- Receita por inteligencia de mercado e precificacao.
 - Receita por trade spend/campanhas patrocinadas.
 - Receita por SaaS e integracoes.
 - Receita por revisao fiscal e melhoria cadastral.
@@ -118,7 +118,7 @@ Estrategia recomendada: tratar ERP como parceiro quando possivel e construir con
 
 NielsenIQ, Scanntech, Neogrid, Horus e similares disputam inteligencia de sell-out, categoria e trade marketing.
 
-Risco: a proposta de vender dados nao e nova.
+Risco: a proposta de vender inteligencia de mercado nao e nova.
 
 Oportunidade: a diferenca precisa estar em dado granular, regional, acionavel dentro da venda, com loop de incentivo ao consumidor e lojista.
 
@@ -422,11 +422,13 @@ Referencia regulatoria contextual: em 2025 o Banco Central publicou/repercutiu r
 
 Referencia: https://agenciabrasil.ebc.com.br/economia/noticia/2025-11/banco-central-estabelece-regras-para-o-mercado-de-criptoativos
 
-## 11. LGPD, dados e venda de base
+## 11. LGPD, inteligencia de mercado e precificacao
 
 Este e um dos pontos mais fracos do plano se for tratado superficialmente.
 
-"Vender a base de dados" e frase perigosa. O produto vendavel deve ser inteligencia agregada, anonimizada e governada, nao base pessoal bruta.
+A empresa nao vai vender dados. O produto vendavel sera inteligencia de mercado e precificacao, construída a partir de informacoes agregadas, anonimizadas e governadas, sem entrega de base pessoal bruta ou dado reidentificavel.
+
+Observacao: qualquer material comercial, contrato ou apresentacao deve evitar a expressao "venda de dados". A linguagem correta e "inteligencia de mercado e precificacao".
 
 ### Riscos
 
@@ -670,9 +672,9 @@ O usuario precisa de incentivo alto o bastante para escanear nota sempre. A font
 
 Sem campanha patrocinada, SaaS, comissao propria ou venda incremental, o token vira redistribuicao sem retorno economico claro.
 
-### 2. "Vender base de dados" e juridicamente perigoso
+### 2. "Vender dados" e juridicamente perigoso
 
-O plano precisa trocar essa linguagem por "vender inteligencia agregada e acionavel". Se vender dado pessoal bruto ou reidentificavel, o risco LGPD pode matar a empresa.
+O plano precisa manter a linguagem em "inteligencia de mercado e precificacao". A empresa nao deve vender dado pessoal bruto, base de dados ou informacao reidentificavel. Se fizer isso, o risco LGPD pode matar a empresa.
 
 ### 3. Confundir fundo com receita distorce a decisao
 
@@ -870,7 +872,7 @@ O que precisa ser cortado ou adiado:
 - conta estilo Caju;
 - delivery proprio;
 - marketplace nacional;
-- promessa de venda de base bruta;
+- promessa de venda de dados ou base bruta;
 - equity amplo para lojas sem performance.
 
 O plano fica forte se a empresa provar uma coisa: que consegue transformar dados de compra e estoque local em venda incremental paga por industria, distribuidor e lojista.
