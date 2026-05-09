@@ -556,6 +556,27 @@ Leitura:
 - atendimento de entregas;
 - comercial enterprise/regional.
 
+### Custo de infraestrutura para os 10 primeiros clientes
+
+Premissa: 10 lojas piloto, R$ 3 milhoes/mes de GMV dentro da plataforma, 30 mil a 80 mil consumidores cadastrados, 200 mil+ notas escaneadas/mes e uso inicial de dashboards, busca, wallet de pontos, campanhas e pipeline de dados.
+
+Estimativa mensal de infraestrutura:
+
+- Cloud transacional, banco, cache, storage e rede: R$ 8 mil a R$ 20 mil/mes.
+- Filas, processamento assíncrono, jobs de normalizacao e eventos: R$ 3 mil a R$ 10 mil/mes.
+- OCR/leitura de nota, validacao de QR Code e enriquecimento de itens: R$ 8 mil a R$ 35 mil/mes, dependendo do volume e do fornecedor.
+- DW/lakehouse, BI, consultas analiticas e retencao historica: R$ 5 mil a R$ 20 mil/mes.
+- Busca textual/geoespacial de produtos, lojas e precos: R$ 2 mil a R$ 8 mil/mes.
+- Observabilidade, logs, auditoria, backup e seguranca: R$ 4 mil a R$ 12 mil/mes.
+- Antifraude, monitoramento de duplicidade e controles de abuso: R$ 3 mil a R$ 15 mil/mes.
+
+Total estimado para os 10 primeiros clientes:
+
+- R$ 33 mil a R$ 120 mil/mes.
+- R$ 396 mil a R$ 1,44M/ano.
+
+Leitura: se os fundadores custearem a infraestrutura no primeiro ano, esse valor pode nao sair do caixa da empresa, mas deve aparecer como custo economico real. A faixa baixa exige arquitetura enxuta, poucos fornecedores externos e forte controle de processamento. A faixa alta aparece quando OCR, DW, logs e antifraude crescem sem governanca.
+
 ### Orcamento de 12 meses - enxuto, mas realista
 
 - Produto/engenharia: R$ 1,2M a R$ 2,4M.
