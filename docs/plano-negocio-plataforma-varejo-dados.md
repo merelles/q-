@@ -412,8 +412,8 @@ A carteira pode evoluir em etapas:
 
 1. Saldo promocional fechado dentro da plataforma.
 2. Saldo fiat para compras dentro da plataforma.
-3. Cartao/beneficios estilo Caju.
-4. Conta regulada via parceiro financeiro.
+3. Integracao com servico financeiro de terceiro para emitir cartao virtual e permitir uso do saldo fiat fora da carteira da plataforma.
+4. Conta regulada via parceiro financeiro, se a tracao e o compliance justificarem.
 5. Token negociavel, somente se fizer sentido regulatorio e economico.
 
 O passo 5 nao deve entrar no MVP.
