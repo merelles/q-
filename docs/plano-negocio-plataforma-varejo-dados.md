@@ -430,6 +430,8 @@ A empresa nao vai vender dados. O produto vendavel sera inteligencia de mercado 
 
 Observacao: qualquer material comercial, contrato ou apresentacao deve evitar a expressao "venda de dados". A linguagem correta e "inteligencia de mercado e precificacao".
 
+Observacao operacional: na leitura de nota ou cupom fiscal, CPF e nome do consumidor nao serao persistidos. Se esses campos aparecerem na origem, devem ser descartados ou mascarados antes da gravacao, mantendo apenas os dados necessarios para validacao da nota, antifraude, pontuacao e inteligencia agregada.
+
 ### Riscos
 
 - Nota fiscal pode conter CPF, local, horario, itens comprados e padrao de vida.
@@ -443,6 +445,7 @@ Observacao: qualquer material comercial, contrato ou apresentacao deve evitar a 
 - consentimento claro e granular;
 - politica de finalidade;
 - minimizacao de dados;
+- descarte ou mascaramento de CPF e nome antes da persistencia;
 - pseudonimizacao operacional;
 - agregacao minima por regiao/categoria/periodo;
 - proibicao de exportar base pessoal bruta;
