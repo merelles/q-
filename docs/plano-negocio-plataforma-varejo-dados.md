@@ -825,6 +825,29 @@ Venda marketplace exige conciliacao entre consumidor, loja, entregador, platafor
 - ROI por categoria;
 - recorrencia de campanha.
 
+### Convergencia de trade spend
+
+Esses indicadores medem se o dinheiro de industria, distribuidor e loja esta convergindo para a plataforma como canal recorrente de ativacao comercial:
+
+- verba de trade spend capturada por mes;
+- numero de anunciantes ativos por mes;
+- recorrencia de anunciantes apos a primeira campanha;
+- percentual de campanhas renovadas;
+- venda incremental atribuida por campanha;
+- ROI por campanha, categoria, loja e regiao;
+- custo de incentivo por venda incremental;
+- margem incremental liquida apos cupom, cashback e subsidio;
+- taxa de conversao de exposicao para carrinho;
+- taxa de conversao de carrinho para compra;
+- uplift de sell-out versus periodo-base ou grupo de controle;
+- tempo medio entre ativacao da campanha e venda confirmada;
+- participacao de campanhas no GMV da plataforma;
+- verba media por anunciante;
+- numero de categorias com campanhas recorrentes;
+- percentual de campanhas com medicao confiavel de incrementalidade;
+- recompra do consumidor apos campanha;
+- diferenca entre preco anunciado, preco confirmado e preco final vendido.
+
 ### Plataforma
 
 - receita por GMV;
@@ -835,6 +858,31 @@ Venda marketplace exige conciliacao entre consumidor, loja, entregador, platafor
 - custo de processamento por nota;
 - churn de lojas;
 - qualidade do cadastro EAN.
+
+### Indicadores principais do projeto
+
+Esses sao os indicadores de comando. Se eles nao evoluirem, o projeto nao deve escalar:
+
+- lojas integradas ativas;
+- GMV transacionado dentro da plataforma;
+- percentual do faturamento da loja convertido para a plataforma;
+- receita recorrente mensal da plataforma, sem contar fundo de incentivo;
+- margem de contribuicao por pedido;
+- custo total por pedido processado;
+- notas fiscais validas por mes;
+- custo por nota fiscal valida;
+- percentual de notas com EAN utilizavel;
+- usuarios ativos mensais;
+- taxa de recompra em 30, 60 e 90 dias;
+- uso de cupons emitidos pelo fundo;
+- saldo/token convertido em compra;
+- fraude por 1.000 notas;
+- ruptura por loja e categoria;
+- cancelamento por divergencia de preco ou estoque;
+- tempo de implantacao por loja;
+- aderencia de estoque/preco integrado;
+- receita de trade spend por loja ativa;
+- venda incremental paga por industria, distribuidor ou lojista.
 
 ## 20. Plano de validacao com decisoes objetivas
 
