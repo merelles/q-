@@ -159,6 +159,7 @@ Referencia: https://memed.com.br/medicos/
 - TENANT_DEFAULT validado para padronizacao negociada e melhoria de cadastro de clientes.
 - Data warehouse para notas, itens, consumidores, lojas, produtos, categorias, precos e campanhas.
 - Consulta complementar de precos em fontes publicas de SEFAZ, quando a estrategia exigir e a UF permitir, como Parana, Bahia, Ceara e outros estados com disponibilidade tecnica.
+- Registro de melhor oferta confirmada por venda efetiva, permitindo comparar lojas que cobrem ofertas sem tratar preco apenas consultado como verdade comercial.
 - Camada de consentimento, anonimização/pseudonimizacao e governanca LGPD.
 
 #### Motor de trade spend
@@ -268,6 +269,8 @@ O fundo de incentivo nao e take rate da plataforma. Ele e uma retencao variavel 
 
 A curva deve ser definida por criterio objetivo de giro, margem, disponibilidade e estrategia comercial. Produto de maior rotatividade exige menor retencao. Produto de menor rotatividade pode sustentar maior incentivo, desde que a margem e o acordo comercial permitam.
 
+Na media, uma retencao proxima de 10% sobre o valor vendido nao deve ser lida como taxa excessiva se o mecanismo provar recompra, recorrencia e venda incremental. Parte relevante desse valor volta para o proprio ecossistema: o consumidor recebe incentivo para comprar novamente, a loja aumenta chance de recompra e a plataforma gera inteligencia de mercado e precificacao para melhorar ativacoes futuras.
+
 Formula do fundo no periodo:
 
 ```text
@@ -276,9 +279,11 @@ Fundo do periodo = soma(valor vendido do item x percentual da curva do item)
 
 Distribuicao mensal do fundo:
 
-- 20% do fundo sera convertido em token/saldo de leitura de notas fiscais.
+- 20% do fundo sera convertido em token/saldo de leitura de notas fiscais e reinvestido em mecanismos para o cliente continuar consumindo na plataforma.
 - 60% do fundo sera convertido em cupom de desconto para compras dentro da plataforma.
 - 20% do fundo ficara como reserva operacional do proprio mecanismo, para antifraude, chargeback, arredondamentos, ajustes de campanha e contingencias.
+
+A parcela de incentivo ao consumidor tambem alimenta inteligencia de mercado acionavel, porque aumenta recorrencia, leitura de notas, historico de consumo e resposta a campanhas. Isso permite ativacoes como notificacoes de promocoes relampago, recomendacoes por categoria, alertas de preco, cupons contextuais e outras mecanicas comerciais que ainda serao descobertas nos testes.
 
 Formula da distribuicao para leitura de notas:
 
@@ -759,6 +764,8 @@ Supermercado digital tem problema de item indisponivel, substituicao e preco div
 Dependendo da UF, layout, consulta, QR Code, disponibilidade e forma de captura, pode faltar EAN, descricoes podem vir ruins, itens podem ser abreviados e paginas podem bloquear automacao. Precisa validar tecnicamente em campo por estado.
 
 Quando necessario para a estrategia de precificacao, a plataforma pode complementar a base com busca de precos em consultas publicas de SEFAZ estaduais, desde que a fonte permita uso tecnico e juridico. Exemplos a avaliar: SEFAZ do Parana, Bahia, Ceara e outros estados com servicos publicos semelhantes. Essa fonte deve ser tratada como complementar, nao como substituta da nota consentida, da integracao lojista ou do historico transacional proprio.
+
+Algumas lojas cobrem a melhor oferta do mercado. A plataforma deve explorar isso comercialmente, mas com disciplina: preco consultado, anunciado ou declarado pela loja nao deve ser tratado como verdade final. A verdade comercial deve ser a venda efetiva confirmada, com item, preco, loja, data e contexto. Isso protege a confianca do consumidor e melhora a inteligencia de precificacao.
 
 ### Dados alimentares podem inferir saude
 
