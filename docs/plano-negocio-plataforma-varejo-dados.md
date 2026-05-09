@@ -296,6 +296,8 @@ Nao cobrar pesado do consumidor antes de provar valor. O consumidor ja precisa t
 
 Selecionar 10 lojas com faturamento mensal aproximado de R$ 3 milhoes cada.
 
+Cada loja selecionada entra em um periodo de prova de 12 meses. A conversao em cotas nao acontece pela simples assinatura ou integracao; acontece apenas se a loja comprovar entrega das metas pactuadas no periodo.
+
 Objetivo:
 
 - converter 10% das vendas dessas lojas para dentro da plataforma;
@@ -341,6 +343,8 @@ Para a empresa ficar interessante, precisa de pelo menos uma das tres coisas:
 - 3 industrias/distribuidores pagando campanha piloto.
 - Receita mensal recorrente acima de R$ 100 mil somando SaaS, servicos, comissao propria e campanhas. O fundo de incentivo nao entra como receita recorrente.
 
+Se a loja bater todas as metas pactuadas ao fim dos 12 meses, as cotas previstas para ela poderao ser convertidas conforme contrato. Se nao bater todas as metas, a situacao deve ser analisada pontualmente, considerando volume entregue, qualidade da integracao, recorrencia operacional, dados gerados, exclusividade regional, aderencia comercial e potencial estrategico.
+
 Se a receita ficar abaixo disso, ha sinal de que o produto e util, mas nao economico.
 
 ## 9. Escala regional e cotas
@@ -364,9 +368,18 @@ Modelo recomendado:
 - pool maximo por onda condicionado a metas;
 - vesting por performance;
 - cliff de 12 meses;
-- recompra se a loja sair;
+- conversao de cotas somente apos comprovacao das metas do periodo de prova;
+- recompra ou redistribuicao se a loja sair;
 - direitos economicos sem controle operacional;
 - regras contra conflito com concorrentes.
+
+### Saida de loja socio-estrategica
+
+Se uma loja optar por sair do contrato social, a preferencia de compra das cotas sera sempre dos socios existentes.
+
+A opcao de compra deve ser oferecida primeiro de forma rateada entre os socios, proporcionalmente a participacao de cada um. As cotas nao adquiridas nessa primeira rodada poderao ser ofertadas aos socios que manifestarem interesse em comprar acima da propria proporcao.
+
+Se, apos essas rodadas internas, ainda sobrarem cotas sem comprador, elas devem ser incorporadas ao negocio conforme previsao societaria, sem obrigar entrada de terceiros e sem transferir poder operacional a concorrentes ou agentes desalinhados.
 
 ## 10. Tokens, carteira e dinheiro
 
