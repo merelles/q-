@@ -974,6 +974,12 @@ Premissa de referencia para 24 meses:
 - trade spend recorrente e mensuravel;
 - venda incremental comprovada.
 
+Referencias de multiplos usadas como benchmark:
+
+- SaaS Valuation Multiple, Q1 2026: mediana privada aproximada de 4,5x ARR e faixas maiores para empresas com crescimento, NRR e eficiencia superiores. Referencia: https://saasvaluationmultiple.com/
+- iMerge Advisors, Q1 2026 Private SaaS Valuation Report: private SaaS estabilizado em aproximadamente 4,0x a 5,5x ARR, com premio para Rule of 40 e Net Revenue Retention. Referencia: https://imergeadvisors.com/saas-valuation-multiples-q1-2026/
+- Flippa, Marketplaces Valuation Multiples for 2026: marketplaces digitais tendem a usar multiplos de receita na faixa de 2,0x a 4,0x, dependendo de efeito de rede, crescimento de GMV, margem e independencia operacional. Referencia: https://flippa.com/blog/marketplaces-valuation-multiples-what-do-you-need-to-evaluate/
+
 ### Cenario conservador
 
 - Receita mensal: R$ 400k a R$ 700k.
