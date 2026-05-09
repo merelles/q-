@@ -158,6 +158,7 @@ Referencia: https://memed.com.br/medicos/
 - Nome, descricao, categoria, imagem, fiscal e aliases por tenant.
 - TENANT_DEFAULT validado para padronizacao negociada e melhoria de cadastro de clientes.
 - Data warehouse para notas, itens, consumidores, lojas, produtos, categorias, precos e campanhas.
+- Consulta complementar de precos em fontes publicas de SEFAZ, quando a estrategia exigir e a UF permitir, como Parana, Bahia, Ceara e outros estados com disponibilidade tecnica.
 - Camada de consentimento, anonimização/pseudonimizacao e governanca LGPD.
 
 #### Motor de trade spend
@@ -756,6 +757,8 @@ Supermercado digital tem problema de item indisponivel, substituicao e preco div
 ### O dado da NFC-e pode nao trazer tudo que voce espera
 
 Dependendo da UF, layout, consulta, QR Code, disponibilidade e forma de captura, pode faltar EAN, descricoes podem vir ruins, itens podem ser abreviados e paginas podem bloquear automacao. Precisa validar tecnicamente em campo por estado.
+
+Quando necessario para a estrategia de precificacao, a plataforma pode complementar a base com busca de precos em consultas publicas de SEFAZ estaduais, desde que a fonte permita uso tecnico e juridico. Exemplos a avaliar: SEFAZ do Parana, Bahia, Ceara e outros estados com servicos publicos semelhantes. Essa fonte deve ser tratada como complementar, nao como substituta da nota consentida, da integracao lojista ou do historico transacional proprio.
 
 ### Dados alimentares podem inferir saude
 
