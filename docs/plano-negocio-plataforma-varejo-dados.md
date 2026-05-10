@@ -1012,3 +1012,41 @@ Leitura: exige trade spend recorrente forte, baixa dependencia operacional, dado
 Se a plataforma bater as metas de 24 meses com receita recorrente, campanhas pagas e prova de incrementalidade, uma faixa defensavel fica entre R$ 60M e R$ 150M.
 
 Acima disso, o valuation so se sustenta se a plataforma provar que converte dinheiro de trade spend em venda incremental mensuravel, com margem positiva e retencao real de lojas, industrias e consumidores.
+
+## 24. Perguntas que precisam de resposta
+
+- Quem paga primeiro: loja, industria ou consumidor?
+- Qual e o wedge unico do MVP?
+- O consumidor ganha o que em 30 segundos, nao em 30 dias?
+- Qual dado voce consegue capturar com qualidade suficiente em 3 UFs?
+- Qual taxa minima de leitura de nota torna o modelo viavel?
+- Qual porcentagem de lojas realmente entrega estoque/preco integrado?
+- Qual prova de incrementalidade faz a industria repetir campanha?
+- O que entra no produto e o que fica explicitamente fora?
+- Qual o custo de aquisicao de loja e de consumidor?
+- Qual e o CAC payback esperado por segmento?
+- Que parte do valor e SaaS, que parte e servico e que parte e midia?
+- O que acontece se o fundo de incentivo cair pela metade?
+- Como voce impede fraude de notas, bots e conluio?
+- Como voce prova que nao esta vendendo dado pessoal bruto?
+- Se so 20% das lojas integrarem bem, o negocio ainda existe?
+- O que mata o projeto antes de escalar?
+- Qual e o criterio objetivo para dizer "isso nao funciona, parar aqui"?
+- Por que uma rede ou ERP nao copiaria isso em 12 meses?
+- Qual e a primeira categoria que da mais valor com menos complexidade?
+- O que voce esta vendendo de verdade: acesso, dados, ativacao ou transacao?
+
+## 25. Matriz de decisao
+
+| Manter | Cortar | Testar antes de escalar |
+|---|---|---|
+| Captura de nota fiscal consentida | Marketplace nacional | Taxa real de leitura de notas por UF |
+| Catalogo EAN multi-tenant | Token negociavel | Qualidade do EAN por tipo de nota |
+| TENANT_DEFAULT curado | Delivery proprio no inicio | Tempo de integracao por loja |
+| Inteligencia de mercado e precificacao | Conta financeira estilo banco | CAC por loja, consumidor e industria |
+| Campanhas patrocinadas / trade spend | Equity amplo para lojas sem performance | Incrementalidade real das campanhas |
+| SaaS B2B para lojas | "App de supermercado" como tese central | Ticket que a industria paga para repetir campanha |
+| Integracao fiscal minima | Complexidade fiscal total no MVP | Ruptura, cancelamento e divergencia de preco |
+| Antifraude desde o dia 1 | Prometer dado bruto ou reidentificavel | Fraude por 1.000 notas |
+| Venda incremental mensuravel | Depender do fundo de incentivo como receita | Recorrencia de uso do consumidor |
+| Coalizao regional de lojas | Escalar 100 lojas antes de provar 3 | Tempo e custo de implantacao por loja |
