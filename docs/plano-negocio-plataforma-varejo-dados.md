@@ -90,6 +90,20 @@ Risco: se a proposta for "app para comprar mercado", perde por CAC, marca, sorti
 
 Oportunidade: iFood e forte na demanda final. A plataforma pode entrar pelo lado B2B regional, dados fiscais, cadastro, estoque, trade spend e coalizao de lojas.
 
+#### Méliuz
+
+Concorrente relevante na camada de nota fiscal, cashback e ativacao de consumidor. A empresa usa nota fiscal como canal de campanha, recompensa e relacionamento, com patrocinio de marcas parceiras e regras por campanha.
+
+Risco: se a tese ficar restrita a "escaneie nota e receba cashback", Méliuz e outros players de incentivo podem copiar o formato rapido.
+
+Oportunidade: diferenciar pela integracao com loja, catalogo EAN, trade spend mensuravel, dados agregados e venda incremental regional.
+
+Referencias:
+
+- https://www.meliuz.com.br/blog/meliuz-nota-fiscal/
+- https://www.meliuz.com.br/como-funciona
+- https://ajuda.meliuz.com.br/hc/pt-br/articles/12289793401236-Como-envio-minha-nota-fiscal
+
 #### Mercado Livre
 
 Concorrente em e-commerce, pagamento, logistica, publicidade e eventualmente farmacia/mercado. Tem base de usuarios e infraestrutura dificil de replicar.
@@ -122,11 +136,33 @@ Risco: a proposta de vender inteligencia de mercado nao e nova.
 
 Oportunidade: a diferenca precisa estar em dado granular, regional, acionavel dentro da venda, com loop de incentivo ao consumidor e lojista.
 
+#### Involves, InfoPrice e ferramentas de execucao/precificacao
+
+Involves atua em trade marketing e execucao de campo; Neogrid e Horus atuam em sell-out, estoque, preco e inteligencia de mercado; soluções como InfoPrice e similares atacam monitoramento de preco e competitividade. Sao concorrentes indiretos porque ocupam parte da mesma cadeia de valor.
+
+Risco: cada uma dessas empresas pode capturar um pedaço do problema antes de voce.
+
+Oportunidade: vencer pela unificacao do fluxo consumidor-loja-industria dentro de um unico loop transacional.
+
 #### Memed
 
 Memed e referencia de prescricao digital, nao concorrente central neste pivot de varejo alimentar. O aprendizado relevante e que infraestrutura regulada/cadastral pode virar ativo valioso, mas varejo fisico e logistica exigem escala pesada.
 
 Referencia: https://memed.com.br/medicos/
+
+### Matriz de concorrentes
+
+| Concorrente | Fraqueza dele | Como ele te engole | Como impedir isso |
+|---|---|---|---|
+| Méliuz | Depende de cashback e campanha; se o incentivo cair, a adesao cai. | Captura o gesto inicial de escanear nota e vira o padrao mental do consumidor. | Entrar por utilidade superior: loja, preco, EAN, compra, trade spend e valor recorrente. |
+| Scanntech | Forte em inteligência, mas menos centrada no consumidor final e no incentivo de comportamento. | Toma a camada de inteligencia acionavel e vira o fornecedor default da industria. | Criar dado consentido do consumidor + ativacao em jornada real + medicao de incrementalidade. |
+| Neogrid | Ecossistema amplo, mas mais orientado a dados de sell-out, estoque e colaboração entre grandes players. | Ocupa a conversa com industria e varejo antes de voce e define a agenda. | Focar em varejo regional, ofertas contextuais e loop transacional com recompensa. |
+| Horus | A proposta é forte em nota fiscal e shopper, mas depende muito da qualidade do dado capturado. | Usa a nota fiscal como fonte de dados e fica na frente do seu core de captura. | Ir alem da captura: integrar loja, catalogo, precificacao e conversao em compra. |
+| Involves | Muito forte em trade marketing e execucao de campo, mas nao resolve o gesto do consumidor. | Entra pelo budget da industria e fecha a porta da ativacao no PDV. | Ser a ponte entre industria, loja e consumidor, nao apenas a ferramenta da industria. |
+| InfoPrice | Forte em monitoramento de preco, mas o valor fica no comparativo, nao na transacao. | Vira a referencia de preco e tira sua vantagem de precificacao. | Trabalhar com preco confirmado por venda efetiva, contexto e historico proprio. |
+| iFood | Marca forte, logistica, recorrencia e capacidade de comprar crescimento. | Pode dominar a ultima milha e o ponto final da compra. | Nao competir no front de marketplace horizontal; ganhar pelo B2B regional e dados fiscais. |
+| Mercado Livre | Escala, logistica, publicidade e pagamentos com poder de empurrar o consumidor para dentro. | Verticaliza e horizontaliza ao mesmo tempo, comprimindo a sua margem de espaco. | Evitar guerra de marketplace e focar no varejo alimentar local e fiscal. |
+| ERPs e software houses | Controlam a entrada tecnica do lojista e podem bloquear, copiar ou condicionar integracao. | Se eles travam a integracao, voce perde o acesso ao dado e ao fluxo. | Ser parceiro padronizavel, com conectores simples e proposta clara de ganho para o ERP. |
 
 ## 5. Produto
 
@@ -737,6 +773,19 @@ Escanear nota, criar conta, entender token e comprar por outro app e friccao alt
 ### 10. Ceder equity para lojas pode sair caro
 
 Se lojas receberem cotas sem metas duras, a empresa perde cap table e nao ganha distribuicao proporcional.
+
+### 11. O que nao fazer
+
+- Nao virar um app genérico de cashback sem tese de varejo.
+- Nao prometer dado bruto, base reidentificavel ou monetizacao fora de governanca LGPD.
+- Nao incluir delivery proprio, carteira robusta e token negociavel no MVP.
+- Nao usar fundo de incentivo como se fosse receita operacional.
+- Nao dar equity amplo a loja sem meta, vesting e clawback.
+- Nao tentar escalar 100 lojas antes de provar 3 integracoes boas.
+- Nao depender de UX bonita para resolver friccao operacional.
+- Nao competir com iFood, Mercado Livre ou redes grandes no front de marketplace horizontal.
+- Nao lançar campanhas sem medicao de incrementalidade.
+- Nao tratar consultado, anunciado ou declarado como verdade comercial final.
 
 ## 18. O que voce provavelmente nao esta vendo
 
