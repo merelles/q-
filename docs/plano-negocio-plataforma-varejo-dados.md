@@ -1,8 +1,8 @@
 # Plano de negocio - Plataforma de varejo, dados fiscais e trade spend
 
 Data base: 2026-05-07  
-Versao: 0.1 executiva  
-Status: rascunho para decisao de fundador
+Versao: 0.2 executiva ampliada
+Status: plano de validacao para decisao de fundador
 
 ## 1. Tese
 
@@ -1099,3 +1099,139 @@ Acima disso, o valuation so se sustenta se a plataforma provar que converte dinh
 | Antifraude desde o dia 1 | Prometer dado bruto ou reidentificavel | Fraude por 1.000 notas |
 | Venda incremental mensuravel | Depender do fundo de incentivo como receita | Recorrencia de uso do consumidor |
 | Coalizao regional de lojas | Escalar 100 lojas antes de provar 3 | Tempo e custo de implantacao por loja |
+
+## 26. Plano de elevacao, mitigacao e potenciais nao explorados
+
+### Tese refinada
+
+A empresa deve ser posicionada como uma infraestrutura regional de retail media, dados transacionais e ativacao comercial para o varejo alimentar independente.
+
+O produto de entrada nao deve ser "app de supermercado" nem "cashback por nota". O wedge inicial deve ser:
+
+- capturar nota fiscal consentida;
+- normalizar item, EAN, loja, categoria, preco e data;
+- integrar 3 lojas piloto com estoque/preco simples;
+- ativar campanhas pagas por industria, distribuidor ou lojista;
+- provar venda incremental por categoria, loja e regiao.
+
+Se essa cadeia nao for provada, marketplace, wallet, delivery e analytics avancado devem continuar fora do escopo.
+
+### ICP inicial recomendado
+
+O primeiro cliente ideal deve ser loja ou rede regional com:
+
+- 1 a 5 unidades;
+- faturamento mensal relevante, mas baixa maturidade digital;
+- ERP identificavel e acesso operacional ao cadastro de produtos;
+- abertura para compartilhar estoque/preco com governanca;
+- interesse em campanha local, cupom e sell-out incremental;
+- decisor acessivel para piloto de 90 a 180 dias.
+
+Lojas muito pequenas tendem a nao pagar o suficiente. Grandes redes tendem a ter area interna, fornecedor estabelecido e poder de negociacao maior. O melhor ponto de entrada e o varejo regional bom o bastante para ter dado, mas sem capacidade de construir a propria plataforma.
+
+### Categoria inicial recomendada
+
+O MVP deve escolher uma ou duas categorias antes de tentar cobrir o supermercado inteiro.
+
+Categorias candidatas:
+
+- bebidas nao alcoolicas;
+- snacks, chocolates e biscoitos;
+- higiene e beleza;
+- limpeza domestica;
+- mercearia seca;
+- lacteos de alta recorrencia, se a operacao suportar ruptura e validade.
+
+O criterio de escolha deve ser: recorrencia, verba de trade spend, simplicidade operacional, baixo risco de perecivel, EAN consistente e margem para incentivo.
+
+### Gates de decisao
+
+| Gate | Prazo | Criterio minimo | Decisao se falhar |
+|---|---:|---|---|
+| Juridico/LGPD | 30 a 60 dias | parecer permitindo uso consentido e inteligencia agregada | nao monetizar dados; reposicionar como software operacional |
+| Nota fiscal | 60 a 90 dias | 5.000 notas reais, 3 UFs, taxa aceitavel de leitura e EAN utilizavel | limitar UFs/categorias ou abandonar scan como wedge principal |
+| Lojista | 90 a 120 dias | 3 lojas integradas com estoque/preco ou carga operacional confiavel | nao vender para 10 lojas ainda |
+| Trade spend | 90 a 180 dias | 3 campanhas pagas e pelo menos 1 renovacao | nao construir motor amplo de campanhas |
+| Incentivo | 90 a 180 dias | recompensa aumenta scan, recompra ou conversao sem destruir margem | reduzir fundo ou mudar incentivo para cupom patrocinado |
+| Fiscal/transacional | 120 a 180 dias | 100 pedidos com emissao fiscal e conciliacao completa | manter venda fora do MVP e focar dados/analytics |
+
+### Registro de riscos e mitigacao
+
+| Risco | Como aparece | Mitigacao |
+|---|---|---|
+| Consumidor nao escaneia nota | baixa recorrencia e custo alto por nota valida | recompensa imediata, cupom simples, limite antifraude e teste A/B por categoria |
+| Dado da NFC-e ruim | falta EAN, descricao ruim, bloqueio por UF ou leitura inconsistente | validar por UF, manter fonte complementar SEFAZ quando permitido e priorizar integracao lojista |
+| Lojista nao abre dados | resistencia a estoque, preco e sell-out | contrato claro, relatorio de retorno, campanha subsidiada e opcao de integracao gradual |
+| Integracao vira consultoria | cada loja exige trabalho manual | padronizar conectores, aceitar CSV no piloto e medir tempo de implantacao por loja |
+| Industria nao renova campanha | campanha gera clique, mas nao prova venda incremental | desenho com periodo-base, grupo de controle, cupom rastreavel e venda confirmada |
+| LGPD limita monetizacao | risco de dado pessoal ou inferencia sensivel | consentimento granular, pseudonimizacao, descarte de CPF/nome e venda de insight agregado |
+| Fraude consome fundo | nota duplicada, nota de terceiros, bot, funcionario coletando nota | chave unica da nota, device fingerprint, limite por usuario, score de risco e auditoria |
+| Delivery distrai o time | SLA, ruptura, cancelamento e suporte crescem cedo demais | loja ou parceiro entrega no piloto; delivery proprio so depois de tracao |
+| Equity para loja dilui demais | lojas recebem cotas sem entregar valor | vesting, metas, clawback e conversao apenas apos 12 meses de performance |
+| Fundo vira falsa receita | incentivo mascara margem real | separar contabilidade do fundo, receita da plataforma e repasses desde o dia 1 |
+
+### Potenciais ainda pouco explorados
+
+1. Retail media regional
+
+A plataforma pode virar uma rede de midia mensuravel para supermercados independentes. A proposta nao e apenas exibir anuncio, mas provar venda por loja, regiao, categoria e periodo.
+
+2. Produto para distribuidores
+
+Distribuidores podem financiar campanhas para acelerar giro, reduzir estoque parado, ativar marcas menores e ganhar leitura de demanda regional. Esse cliente pode pagar antes da industria grande.
+
+3. Cadastro e fiscal como produto de entrada
+
+EAN, descricao, NCM, CEST, unidade, embalagem e tributacao podem virar uma oferta B2B independente. A loja entra por melhoria cadastral e a plataforma cria base para campanha, busca e venda.
+
+4. Benchmark regional de preco
+
+A empresa pode vender indice agregado de competitividade por categoria, bairro, loja e periodo, sem expor dado pessoal ou dado bruto de consumidor.
+
+5. Inteligencia de ruptura
+
+Ruptura, substituicao, cancelamento e divergencia entre preco anunciado e preco vendido podem virar produto para loja, distribuidor e industria.
+
+6. Campanhas cooperadas
+
+Industria, distribuidor e loja podem dividir o incentivo de uma mesma campanha. Isso reduz dependencia de um pagador unico e melhora margem da plataforma.
+
+7. Portal de marcas regionais
+
+Marcas locais podem comprar ativacao em lojas especificas, com verba menor e ciclo comercial mais curto que grandes industrias nacionais.
+
+8. API de catalogo
+
+Se o TENANT_DEFAULT for bem governado, a plataforma pode oferecer enriquecimento de cadastro para ERPs, lojas, distribuidores e redes regionais.
+
+9. Score operacional de loja
+
+Aderencia de estoque/preco, ruptura, cancelamento, tempo de separacao, recompra e divergencia fiscal podem compor um score interno para priorizar campanhas e trafego.
+
+10. Coalizao regional defensavel
+
+O ativo defensavel nao e a interface. E a combinacao de contratos regionais, dados consentidos, integracao, catalogo curado, campanha paga e medicao de sell-out incremental.
+
+### O que deve mudar no plano de execucao
+
+- O MVP deve provar venda incremental antes de ampliar marketplace.
+- A campanha paga deve ser vendida antes do motor completo de trade spend.
+- O consumidor deve receber valor em ate 30 segundos depois do scan, mesmo que o beneficio financeiro maior venha depois.
+- O dashboard lojista deve mostrar retorno pratico: venda, ruptura, preco, campanha e cadastro.
+- O pitch para industria deve ser ROI e sell-out incremental, nao base de dados.
+- O pitch para loja deve ser venda adicional, melhoria cadastral e canal regional, nao tecnologia.
+- O pitch para distribuidor deve ser giro, campanha local e leitura de demanda.
+- A contabilidade deve separar receita, incentivo, repasse, subsidio, cashback e reserva operacional.
+- A arquitetura deve nascer com auditoria, consentimento, antifraude e separacao entre dado identificavel e dado analitico.
+- A expansao para 100 lojas so deve ocorrer depois de 3 integracoes boas, 3 campanhas pagas e pelo menos 1 caso de renovacao.
+
+### Proximos 30 dias
+
+- escolher 1 UF principal e 2 UFs secundarias para teste de nota fiscal;
+- selecionar 20 lojas-alvo e classificar por ERP, faturamento, categoria forte e abertura comercial;
+- escolher 2 categorias iniciais para campanha;
+- desenhar contrato-piloto com loja, industria/distribuidor e termos de consentimento;
+- definir regra antifraude minima para nota, usuario, dispositivo, loja e campanha;
+- montar planilha de unit economics separando receita real, fundo de incentivo e repasses;
+- vender 3 campanhas pequenas antes de construir funcionalidades avancadas;
+- definir criterios objetivos de continuidade, pausa ou encerramento do projeto.
