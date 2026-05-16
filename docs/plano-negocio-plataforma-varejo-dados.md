@@ -168,6 +168,14 @@ Referencia: https://memed.com.br/medicos/
 
 ### Modulos principais
 
+#### App de validade e inventario
+
+- Leitura de EAN e nota fiscal para registrar entrada de estoque.
+- Controle de validade por lote, com foco inicial em laticinios e pao de forma.
+- Alertas de proximidade de vencimento para reducao de perda e ruptura.
+- Inventario simples por loja, com rastreio de produto, quantidade e data de entrada.
+- Base operacional para validar aderencia do lojista antes do rollout do core completo.
+
 #### App consumidor
 
 - Leitura de QR Code da NFC-e ou upload/foto da nota.
@@ -204,6 +212,13 @@ Referencia: https://memed.com.br/medicos/
 - Oferta contextual: exemplo, busca por "chocolate Garoto" pode exibir produto concorrente ou complementar com desconto subsidiado.
 - Regras por localizacao, estoque, categoria, margem, periodo e perfil de compra.
 - Medicao de conversao, incrementalidade e ROI.
+
+#### Core promocional preventivo
+
+- Publicacao de promocoes com foco inicial em prevencao de perda, giro e vencimento.
+- Destaque para itens com validade curta, excesso de estoque ou risco de ruptura.
+- Regras simples de priorizacao para testar adesao do lojista e resposta do consumidor.
+- Escopo limitado no inicio: nao e motor completo de trade spend, e sim a camada base de promocao do MVP.
 
 #### Fiscal e compliance
 
@@ -334,6 +349,22 @@ Essa regra deve ser tratada como politica de incentivo e liquidez, nao como rece
 Nao cobrar pesado do consumidor antes de provar valor. O consumidor ja precisa ter trabalho de escanear nota. Se o premio for baixo e a consulta for paga cedo demais, o funil morre.
 
 ## 8. Estrategia de kickoff
+
+### Teste antes do kickoff
+
+Antes de abrir o kickoff completo da plataforma, executar um teste curto com um objetivo operacional unico:
+
+- criar uma app de validade que leia EAN e nota fiscal para registrar inventario;
+- controlar validade de laticinios e pao de forma;
+- reduzir perda por vencimento e melhorar visibilidade de estoque;
+- montar, em paralelo, o core da plataforma para publicar promocoes preventivas;
+- manter o escopo promocional restrito a prevencao neste momento, sem tentar fechar o produto final cedo demais.
+
+Critério do teste:
+
+- o lojista precisa conseguir registrar entrada, saldo e vencimento com friccao baixa;
+- o usuario interno precisa enxergar valor em perda evitada, nao em promessa abstrata;
+- a base precisa provar que leitura de nota e EAN gera dado util para operacao e promocao.
 
 ### Hipotese inicial
 
@@ -652,6 +683,7 @@ Gate de decisao:
 
 ### Fase 1 - MVP de dados e nota fiscal (2 a 5 meses)
 
+- App de validade e inventario para laticinios e pao de forma.
 - App consumidor com leitura de NFC-e.
 - Pipeline de ingestao, deduplicacao e validacao.
 - Cadastro EAN/GTIN multi-tenant.
