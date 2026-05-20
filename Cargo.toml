@@ -3,4 +3,13 @@ name = "z-mais"
 version = "0.1.0"
 edition = "2024"
 
+[workspace]
+members = [".", "catalog/product-core", "catalog/catalog-service"]
+resolver = "3"
+
 [dependencies]
+tokio = { version = "1", features = ["full"] }
+tokio-postgres = "0.7"
+bytes = "1"
+anyhow = "1"
+futures = "0.3.32"
